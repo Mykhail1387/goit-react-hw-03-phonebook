@@ -6,7 +6,11 @@ const ContactList = ({ listContacts, onDeleteContact }) =>
     (
         <>
             <ul>
-                <ElementListContact propsListContacts={listContacts} onDeleteContact={onDeleteContact} />
+
+                {listContacts.map(list =>
+                    < ElementListContact key={list.id} list={list} onDeleteContact={onDeleteContact} />
+                )}
+
             </ul>
         </>
     )

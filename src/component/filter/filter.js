@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './filter.module.css';
+import PropTypes from 'prop-types';
 
 const Filter = ({ value, onchangeFilter }) => (
     <div className={styles.wrap}>
@@ -13,3 +14,8 @@ const Filter = ({ value, onchangeFilter }) => (
 )
 
 export default Filter;
+
+Filter.propTypes = {
+    value: PropTypes.string.isRequired,
+    onchangeFilter: PropTypes.func.isRequired
+}
